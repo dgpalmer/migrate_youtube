@@ -12,8 +12,8 @@
   },
   "require": {
     "google/apiclient": "^2.0"
-   }
+   },
   "require-dev": {
-    "drupal/migrate_plus": "~8.2"
+    "drupal/migrate-plus": "~8.2"
   }
 }
