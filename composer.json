@@ -11,6 +11,7 @@
     "source": "http://cgit.drupalcode.org/migrate_youtube"
   },
   "require": {
-    "google/apiclient": "^2.0"
+    "google/apiclient": "^2.0",
+    "drupal/migrate_plus": "8.2.x-dev"
    }
 }
