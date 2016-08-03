@@ -1,0 +1,18 @@
+{
+  "name": "drupal/migrate_youtube",
+  "type": "drupal-module",
+  "description": "Import YouTube videos through the Google API PHP Client Library",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/migrate_youtube",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/migrate_youtube",
+    "source": "http://cgit.drupalcode.org/migrate_youtube"
+  },
+  "require": {
+    "google/apiclient": "^2.0"
+    "drupal/field_group": "~8",
+    "drupal/migrate_plus": "8.2.x-dev",
+   }
+}

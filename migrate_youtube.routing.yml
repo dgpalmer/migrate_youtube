@@ -1,0 +1,33 @@
+
+migrate_youtube.settings:
+  path: '/admin/config/migrate_youtube/settings'
+  defaults:
+    _form: '\Drupal\migrate_youtube\Form\MigrateYouTubeConfigForm'
+    _title: 'MigrateYouTubeConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+migrate_youtube.migrate_youtube_source:
+  path: '/admin/config/migrate_youtube/migrateyoutubesource'
+  defaults:
+    _form: '\Drupal\migrate_youtube\Form\MigrateYouTubeSource'
+    _title: 'MigrateYouTubeSource'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+migrate_youtube.migrate_youtube_source:
+  path: '/admin/config/migrate_youtube/migrateyoutubesource'
+  defaults:
+    _form: '\Drupal\migrate_youtube\Form\MigrateYouTubeSource'
+    _title: 'MigrateYouTubeSource'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

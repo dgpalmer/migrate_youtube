@@ -1,0 +1,46 @@
+# Migration configuration for  youtube videos.
+id: KendrickYT
+label: YouTube
+migration_group: youtube
+source:
+  plugin: youtube
+  data_fetcher_plugin: youtubefetcher
+  data_parser_plugin: youtubeparser 
+  id: KendrickLamarVevo
+  fields:
+    -
+      name: youtube_id
+      label: "YouTube ID"
+      selector: id
+    - 
+      name: title
+      label: "YouTube Title"
+      selector: title
+    -
+      name: video_url 
+      label: "YouTube URL"
+      selector: video_url
+    -
+      name: youtube_description
+      label: "Youtube Description"
+      selector: description
+    -
+      name: view_count
+      label: "View Count"
+      selector: view_count
+  ids:
+    youtube_id:
+      type: string
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: video
+  id: youtube_id
+  title: title 
+  field_video: video_url
+  field_youtube_id: youtube_id
+  field_youtube_description: description
+  field_view_count: view_count
+migration_dependencies: {}

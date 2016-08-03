@@ -1,0 +1,12 @@
+name: Migrate YouTube
+type: module
+description: Import YouTube videos through the Google API PHP Client Library
+core: 8.x
+package: Custom
+dependencies:
+  - ctools
+  - menu_ui
+  - migrate
+  - migrate_plus
+  - migrate_tools
+  - field_group

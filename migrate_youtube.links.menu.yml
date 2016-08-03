@@ -1,0 +1,14 @@
+migrate_youtube.settings:
+  title: 'Migrate YouTube Configuration'
+  route_name: migrate_youtube.settings
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+
+migrate_youtube.migrate_youtube_source:
+  title: 'Add Migrate YouTube Source'
+  route_name: migrate_youtube.migrate_youtube_source
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+
