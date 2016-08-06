@@ -5,6 +5,13 @@
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
   "homepage": "https://www.drupal.org/project/migrate_youtube",
+  "authors": [
+    {
+      "name": "Donovan Palmer",
+      "homepage":"https://www.drupal.org/u/dpalmer",
+      "role": "Maintainer"
+    }
+  ],
   "minimum-stability": "dev",
   "support": {
     "issues": "http://drupal.org/project/issues/migrate_youtube",
@@ -13,7 +20,4 @@
   "require": {
     "google/apiclient": "^2.0"
    },
-  "require-dev": {
-    "drupal/migrate-plus": "~8.2"
-  }
 }
