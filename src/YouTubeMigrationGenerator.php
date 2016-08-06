@@ -50,7 +50,6 @@ class YouTubeMigrationGenerator {
     $dependencies = [];
     $content_id = 'YoutubeMigration' . $this->configuration['youtube_channel'];
     $migration = static::createEntityFromPlugin('youtube_videos', $content_id);
-    ksm($migration);
     $migration->set('migration_group', 'youtube');
     $source = $migration->get('source');
     $source['id'] = $this->configuration['youtube_channel'];
@@ -80,14 +79,12 @@ class YouTubeMigrationGenerator {
     /** @var \Drupal\migrate\Plugin\MigrationPluginManagerInterface $plugin_manager */
     $plugin_manager = \Drupal::service('plugin.manager.migration');
     $migration_plugin = $plugin_manager->createInstance($plugin_id);
-    ksm($migration_plugin);
     $entity_array['id'] = $new_plugin_id;
     $entity_array['label'] = $migration_plugin->label();
     $entity_array['source'] = $migration_plugin->getSourceConfiguration();
     $entity_array['destination'] = $migration_plugin->getDestinationConfiguration();
     $entity_array['process'] = $migration_plugin->getProcess();
     $entity_array['migration_dependencies'] = $migration_plugin->getMigrationDependencies();
-    ksm($entity_array);
     $migration_entity = Migration::create($entity_array);
     return $migration_entity;
   }

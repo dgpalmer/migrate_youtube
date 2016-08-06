@@ -42,7 +42,6 @@ class YouTubeParser extends ClientDataParserPluginBase implements ContainerFacto
    * {@inheritdoc}
    */
   protected function getSourceData($id) {
-    error_log('getSourceData myt');
     $iterator = $this->getSourceIterator($id);
 
     // Recurse through the result array. When there is an array of items at the
