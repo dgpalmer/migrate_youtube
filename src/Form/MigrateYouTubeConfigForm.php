@@ -4,6 +4,7 @@ namespace Drupal\migrate_youtube\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Class MigrateYouTubeConfigForm
@@ -43,11 +44,16 @@ class MigrateYouTubeConfigForm extends ConfigFormBase {
       '#title' => t('Youtube Migration Settings'),
     );
 
+
+    $google_api_setup = Url::fromUri('https://console.developers.google.com/apis/credentials');
+    $external_link = \Drupal::l(t('Here'), $google_api_setup);
+
+
     // API Key
     $form['youtube']['api_key'] = array(
       '#type' => 'textfield',
       '#title' => 'Youtube API Key',
-      '#description' => t('Set up an API account here https://console.developers.google.com/projectselector/apis/credentials'),
+      '#description' => t('Set up an API account ') . $external_link,
       '#default_value' => $config->get('api_key'),
     );
 
